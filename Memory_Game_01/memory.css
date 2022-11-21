@@ -1,0 +1,431 @@
+* { 
+    margin: 0;
+    padding: 0;
+}
+
+#backImage {
+    background-image: url("./img/pexels-pixabay-158780.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#bord {
+    height: 92vh; 
+    width: 67vw;
+    align-content: stretch;
+}
+
+.start-blur {
+    position: absolute;
+    
+    background-color: rgba(0, 0, 0, 0.2);
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+
+    height: 100vh;
+    width: 100vw;
+    justify-content: center; 
+    text-align: center;
+
+    font-family: 'Sonsie One', cursive;
+    font-size: 8vw;
+    font-weight: bold;
+    text-shadow: 4px 3px 6px #ECFF00, -4px -3px 6px #ECFF00, 4px -3px 6px #ECFF00, -4px 3px 6px #ECFF00;
+
+
+}
+
+.card {
+    position: relative;
+
+    width: 14.2%;
+    height: 21.5%;
+    margin: 1.2%;
+    border-radius: 17%;
+
+    align-self: center; 
+    text-align: center;
+   
+    cursor: pointer;
+}
+
+.base {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+    border-radius: 17%;
+
+    transform-style: preserve-3d;
+    transition: transform 1.3s cubic-bezier(0.06, 0.92, 0.78, 0.93);
+    transition-property: transform;
+}
+
+.front {
+    position: absolute;
+
+    width: 100%;
+    height: 100%; 
+
+    backface-visibility: hidden;
+    background: rgb(0, 202, 0);
+    border-radius: 17%;
+
+    box-shadow:    6px 6px 10px -1px rgb(0, 0, 0),
+                    -6px -6px 10px -1px rgba(3, 255, 3, 0.7),
+                    inset 5px 5px 8px -1px rgb(3, 255, 3, 0.7),
+                    inset -5px -5px 8px -1px rgba(0, 0, 0),
+                    0px 12px 10px -10px rgba(36, 82, 27, 0.516);
+}
+
+.back {
+    position: absolute;
+
+    width: 100%;
+    height: 100%; 
+
+    backface-visibility: hidden;
+    background: rgb(0, 202, 0);
+    border-radius: 17%;
+
+    align-self: center; 
+    text-align: center;
+    
+    box-shadow: 6px 6px 10px -1px rgb(0, 0, 0),
+                -6px -6px 10px -1px rgba(3, 255, 3, 0.7),
+                inset -5px -5px 8px -1px rgba(0, 0, 0),
+                0px 12px 10px -10px rgba(36, 82, 27, 0.516);
+
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    cursor: pointer;
+
+    transform: rotateY(180deg);
+}
+
+.startAnimation {
+    box-shadow: 6px 6px 10px -1px rgb(0, 0, 0),
+                -5px -5px 7px -1px rgba(3, 255, 3, 0.7),
+                inset 5px 5px 8px -1px rgb(3, 255, 3, 0.7),
+                inset -5px -5px 8px -1px rgba(0, 0, 0),
+                0px 12px 10px -10px rgba(36, 82, 27, 0.516),
+                inset 0px 0px 50px 100px rgb(255, 255, 0),
+                0px 0px 21px 4px rgb(255, 255, 0);
+}
+.card.clicked .base {
+    transform: rotateY(180deg);
+}
+
+.twins {
+    width: 14.2%;
+    height: 21.5%;
+    margin: 1.2%;
+    border-radius: 17%;
+
+    box-shadow: 8px 8px 19px 3px;
+
+    background: rgba(0, 255, 149, 0.322);
+
+    transition: transform 1.5s;
+
+    cursor: none;
+
+}
+
+.card:hover {
+    /* box-shadow: 0px 0px 21px 4px rgb(255, 255, 0); */
+    box-shadow: 6px 6px 10px -1px rgb(0, 0, 0),
+                -5px -5px 7px -1px rgba(3, 255, 3, 0.7),
+                inset 5px 5px 8px -1px rgb(3, 255, 3, 0.7),
+                inset -5px -5px 8px -1px rgba(0, 0, 0),
+                0px 12px 10px -10px rgba(36, 82, 27, 0.516),
+                inset 0px 0px 50px 100px rgb(0, 246, 0),
+                0px 0px 21px 4px rgb(255, 255, 0);
+}
+
+#banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: center;
+    margin-right: 1.3vw;
+}
+
+.banner-parts {
+    height: 50vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#watch {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 12vw;
+    height: 12vw;
+    border-radius: 50%;
+
+    background: conic-gradient(rgb(255, 153, 0), rgb(255, 153, 0), rgb(255, 153, 0), rgb(255, 255, 0) 1deg, rgba(255, 0, 0, 0.3) 0deg);
+
+    box-shadow: 6px 6px 10px -1px rgb(0, 0, 0),
+                -6px -6px 10px -1px rgba(3, 255, 3, 0.7);
+}
+
+#watch::before {
+    content: "";
+    position: absolute;
+
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+
+    background-image: url("./img/pexels-pixabay-watch158780.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    box-shadow: inset 5px 5px 8px -1px rgb(0, 0, 0),
+                inset -5px -5px 8px -1px rgba(3, 255, 3, 0.7),
+                -0.5px -0.5px 8px rgba(255, 74, 74, 0.5),
+                0.5px 0.5px 8px rgb(73, 32, 32),
+                0px 12px 10px -10px rgba(73, 32, 32, 0.032);
+
+
+}
+
+#timer {
+    position: relative;
+
+    font-family: 'Sonsie One', cursive;
+    font-size: 3.2vw;
+    font-weight: bold;
+   
+    color: #F00;
+    text-shadow: 4px 3px 6px #ECFF00, -4px -3px 6px #ECFF00, 4px -3px 6px #ECFF00, -4px 3px 6px #ECFF00;
+}
+
+#scoreboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: center;
+
+    font-size: 40px;
+    
+    width: 16vw;
+    height: 80vh;
+
+    margin-left: 1.3vw;
+}
+
+.players {
+    width: 100%;
+    height: 30%;
+    
+    display: flex;
+    align-items: center;
+}
+@import url('https://fonts.googleapis.com/css2?family=Sonsie+One&display=swap');
+.playerImg {
+    width: 10.5vw;
+    height: 9vw;
+    border-radius: 50%;
+
+    background-image: url("./img/squid-game-g1ae11aeb2_1920.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+
+    font-family: 'Sonsie One', cursive;
+    font-size: 1.5vw;
+    font-weight: bold;
+
+    text-shadow: 4px 3px 6px #ECFF00, -4px -3px 6px #ECFF00, 4px -3px 6px #ECFF00, -4px 3px 6px #ECFF00;
+}
+
+.playingNow {
+    animation: turn 0.7s ease-in infinite;
+}
+@keyframes turn {
+    from { 
+        background-image: url("./img/squid-game-g1ae11aeb2_1920.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    to {
+        background: radial-gradient(rgba(234, 255, 0, 0.71),rgba(234, 255, 0, 0.564), rgba(234, 255, 0, 0)), url(squid-game-g1ae11aeb2_1920.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+#playerImg0 {
+    box-shadow: 0px 0px 25px 10px #FF0000, inset 0px 0px 35px 10px #FF0000;
+}
+#playerImg1 {
+    box-shadow: 0px 0px 25px 10px #0000ff, inset 0px 0px 35px 10px #0000ff;
+}
+#playerImg2 {
+    box-shadow: 0px 0px 25px 10px #00ff00, inset 0px 0px 35px 10px #00ff00;
+}
+
+.playerText {
+    font-family: 'Sonsie One', cursive;
+    font-size: 3.3vw;
+    font-weight: bold;
+
+    text-shadow: 4px 3px 6px #ECFF00, -4px -3px 6px #ECFF00, 4px -3px 6px #ECFF00, -4px 3px 6px #ECFF00;
+
+    margin-left: 1.5vw;
+}
+
+.plusPoint{
+    animation: plus 1.5s ease-in forwards;
+}
+@keyframes plus {
+    0% {
+        text-shadow: 4px 3px 6px #ECFF00, -4px -3px 6px #ECFF00, 4px -3px 6px #ECFF00, -4px 3px 6px #ECFF00;
+    }
+    50% {
+        text-shadow: 10px 9px 12px #ffffff, -10px -9px 12px #ffffff, 10px -9px 12px #ffffff, -10px 9px 12px #ffffff;
+    }
+    100% {
+        text-shadow: 4px 3px 6px #ECFF00, -4px -3px 6px #ECFF00, 4px -3px 6px #ECFF00, -4px 3px 6px #ECFF00;
+    }
+}
+
+.blur {
+    display: flex;
+    position: absolute;
+    
+    background-color: rgba(0, 0, 0, 0.3);
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+
+    
+    height: 100vh;
+    width: 100vw;
+    justify-content: center; 
+    text-align: center;
+
+    font-family: 'Sonsie One', cursive;
+    font-size: 4.4vw;
+    font-weight: bold;
+    text-shadow: 0 -1px 4px #FFF, 0 -2px 20px #ff0, 0 -10px 40px #ff8000, 0 -18px 80px #F00;
+
+
+}
+
+.after-game {
+    position: absolute;
+
+    width: 15%;
+    height: 10%;
+    margin-top: 10vh;
+    border-radius: 8vw;
+
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+
+    font-family: 'Sonsie One', cursive;
+    font-size: 2.4vw;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(179, 20, 20);
+
+    background-color: #cbd35e;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    box-shadow: 0px 0px 21px 4px #cbd35e;
+    cursor: pointer;
+}
+
+.after-game:hover {
+    background-color: #f1ff34;
+}
+
+#homepage-after-game {
+    margin-top: 37vh
+}
+
+#play {
+    margin-top: -30vh;
+    border: none;
+    animation: clickMe 0.7s ease-in alternate infinite;
+}
+@keyframes clickMe {
+    from {
+        box-shadow: 3px 2px 5px #eeff00,
+                    -3px -2px 5px #ECFF00,
+                    3px -2px 5px #ECFF00,
+                    -3px 2px 5px #ECFF00;
+    }
+    to {
+        box-shadow: 6px 4px 10px #eeff00,
+                    -6px -4px 10px #ECFF00,
+                    6px -4px 10px #ECFF00,
+                    -6px 4px 10px #ECFF00;
+    }
+}
+
+#Exit-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7.2vw;
+    height: 7.2vw;
+    background: rgba(255, 255, 0, 0.445);
+    border: none;
+    border-radius: 15%;
+    cursor: pointer;
+    font-size: 5vw;
+
+    box-shadow:    6px 6px 10px -1px rgb(0, 0, 0),
+                    -4px -4px 10px -1px rgba(3, 255, 3, 0.7),
+                    inset -4px -4px 8px -1px rgba(0, 0, 0),
+                    0px 12px 10px -10px rgba(36, 82, 27, 0.516),
+                    inset 0px 0px 11px 6px rgba(203, 67, 67, 0.603);
+}
+
+#Exit-button:hover {
+    box-shadow: 6px 6px 10px -1px rgb(0, 0, 0),
+                -4px -4px 10px -1px rgba(3, 255, 3, 0.7),
+                inset -4px -4px 8px -1px rgba(0, 0, 0),
+                0px 12px 10px -10px rgba(36, 82, 27, 0.516),
+                inset 0px 0px 11px 6px rgba(203, 67, 67, 0.603),
+                3px 2px 5px #eeff00,
+                -3px -2px 5px #ECFF00,
+                3px -2px 5px #ECFF00,
+                -3px 2px 5px #ECFF00;
+}
+
+.flex-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+
+
+

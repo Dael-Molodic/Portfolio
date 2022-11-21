@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="homepage.css">
+    <script src="homepage.js" defer></script>
+</head>
+<body>
+    <div id="backImage">
+
+        <h1>Memory Game</h1>
+
+        <div id="categories-container">
+            <div class="categories">Difficulty</div>
+            <div class="categories">Players number</div>
+            <div class="categories">Game type</div>
+        </div>
+
+        <form action="memory.html" method="get">
+
+            <div class="user-container">
+               <!-- render -->
+            </div>
+
+            
+            <div class="select-box">
+
+                <div class="options-container">
+                    
+                    <div class="option card">
+                        <input type="radio" class="radio" id="16" value="16" name="card-number" required>
+                        <label for="16">Easy</label>                        
+                    </div>
+                    <div class="option card">
+                        <input type="radio" class="radio" id="20" value="20" name="card-number">
+                        <label for="20">Medium</label>                        
+                    </div>
+                    <div class="option card">
+                        <input type="radio" class="radio" id="24" value="24" name="card-number">
+                        <label for="24">Hard</label>                        
+                    </div>
+
+                </div>
+                
+                <div class="selected">
+                    Select number
+                </div>
+                
+
+            </div>
+
+
+            <div class="select-box">
+
+                <div class="options-container">
+                    
+                    <div class="option player">
+                        <input type="radio" class="radio" id="1" value="1" name="player-number" required>
+                        <label for="1">VS computer</label>                        
+                    </div>
+                    <div class="option player">
+                        <input type="radio" class="radio" id="2" value="2" name="player-number">
+                        <label for="2">2</label>                        
+                    </div>
+                    <div class="option player">
+                        <input type="radio" class="radio" id="3" value="3" name="player-number">
+                        <label for="3">3</label>                        
+                    </div>
+
+                </div>
+
+                <div class="selected">
+                    Select number
+                </div>
+                
+                
+            </div>
+            
+
+            <div class="select-box">
+
+                <div class="options-container">
+                    
+                    <div class="option type">
+                        <input type="radio" class="radio" id="animals" value="0" name="card-type" required> 
+                        <label for="animals">Animals</label>                        
+                    </div>
+                    <div class="option type">
+                        <input type="radio" class="radio" id="food" value="1" name="card-type">
+                        <label for="food">Food</label>                        
+                    </div>
+
+                </div>
+                
+                <div class="selected">
+                    Select type
+                </div>
+
+                
+            </div>
+
+            <button type="submit" onclick="checkVal()"><sub><ion-icon name="play"></ion-icon></sub></button>
+        
+        </form>
+
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
