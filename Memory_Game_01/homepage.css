@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sonsie+One&display=swap');
+* { 
+    margin: 0;
+    padding: 0;
+    font-family: 'Fredoka One', cursive;
+    box-sizing: border-box;
+}
+
+#backImage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    background-image: url("./img/pexels-pixabay-158780.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+h1 {
+    margin-top: 5vh;
+    font-family: 'Sonsie One', cursive;
+    font-size: 5vw;
+    font-weight: bold;
+    text-shadow: 0 -1px 4px #FFF, 0 -2px 20px #ff0, 0 -10px 40px #ff8000, 0 -18px 80px #F00;
+}
+
+#categories-container {
+    display: flex;
+    justify-content: space-around;
+    width: 77vw;
+    margin-top: 42vh;
+}
+
+.categories {
+    width: 29%;
+    text-align: center;
+    font-size: 1.8vw;
+    text-shadow: 4px 3px 6px #ECFF00, -4px -3px 6px #ECFF00, 4px -3px 6px #ECFF00, -4px 3px 6px #ECFF00;
+}
+
+.user-container {
+    position: absolute;
+    height: 5vw; 
+    top: 45%;
+    display: flex;
+    justify-content: center;
+    width: 77vw;
+}
+
+#user-name {
+    position: relative;
+    margin: 0px 2% 0px 2%;
+    width: 19.5%;
+}
+
+#user-name input {
+    width: 100%;
+    height: 100%;
+
+    background: rgba(159, 255, 142, 0);
+    color: black;
+    border-radius: 10px;
+    padding: 2%;
+    padding-left: 3.5%;
+    margin-bottom: 2.2%;
+
+    font-size: 1.9vw;
+    text-align: center;
+
+    
+    box-sizing: border-box;
+    border: solid rgba(159, 255, 142);
+    
+    outline: none;
+
+    box-shadow:    6px 6px 10px -1px rgb(0, 0, 0),
+                    -4px -4px 10px -1px rgba(3, 255, 3, 0.7),
+                    0px 12px 10px -10px rgba(36, 82, 27, 0.516);
+
+    text-shadow: 4px 3px 6px rgba(159, 255, 142), -4px -3px 6px rgba(159, 255, 142), 4px -3px 6px rgba(159, 255, 142), -4px 3px 6px rgba(159, 255, 142);
+}
+
+#user-name span {
+    position: absolute;
+    pointer-events: none;
+
+    left: 10%;
+    bottom: 32%;
+    
+
+    font-size: 1.5vw;
+    color: rgba(0, 0, 0, 0.68);
+    text-shadow: 4px 3px 4px rgba(159, 255, 142, 0.772), -4px -3px 4px rgba(159, 255, 142, 0.772), 4px -3px 4px rgba(159, 255, 142, 0.772), -4px 3px 4px rgba(159, 255, 142, 0.772);
+
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+#user-name input:valid ~ span,
+#user-name input:focus ~ span
+{
+    color: rgb(0, 0, 0);
+    transform: translateX(2.1vw) translateY(-5.84vh);
+    font-size: 1vw;
+    text-shadow: none;
+    background: rgba(159, 255, 142);
+
+    border-radius: 0.2vw;
+
+    box-shadow: 2.8px 0px 0px 0px rgba(159, 255, 142),
+                -2.8px 0px 0px 0px rgba(159, 255, 142);
+
+    letter-spacing: 0.3vw;
+    
+}
+
+button {
+    position: absolute;
+    top: 26%;
+    width: 6vw;
+    height: 6vw;
+    background: url("./img/play.svg");
+    background-color: rgba(255, 255, 0, 0.338);
+    border: none;
+    border-radius: 15%;
+    cursor: pointer;
+
+    box-shadow:    6px 6px 10px -1px rgb(0, 0, 0),
+                    -4px -4px 10px -1px rgba(3, 255, 3, 0.7),
+                    inset -4px -4px 8px -1px rgba(0, 0, 0),
+                    0px 12px 10px -10px rgba(36, 82, 27, 0.516),
+                    inset 0px 0px 11px 6px rgba(203, 67, 67, 0.603);
+}
+
+button:hover {
+    box-shadow: 6px 6px 10px -1px rgb(0, 0, 0),
+                -4px -4px 10px -1px rgba(3, 255, 3, 0.7),
+                inset -4px -4px 8px -1px rgba(0, 0, 0),
+                0px 12px 10px -10px rgba(36, 82, 27, 0.516),
+                inset 0px 0px 11px 6px rgba(203, 67, 67, 0.603),
+                3px 2px 5px #eeff00,
+                -3px -2px 5px #ECFF00,
+                3px -2px 5px #ECFF00,
+                -3px 2px 5px #ECFF00;
+}
+
+form {
+    margin-top: 1.5vh;
+    display: flex;
+    justify-content: space-around;
+    width: 77vw;
+}
+
+.select-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 29%;
+    font-weight: bold;
+}
+
+.select-box .options-container {
+    color: black;
+    border-radius: 10px;
+    width: 100%;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    text-align: center;
+    transition: all 0.5s;
+
+    order: 1;
+}
+
+.select-box .options-container.active {
+    opacity: 1;
+    max-height: 100%;
+}
+
+.select-box .options-container.active + .selected::after {
+    top: -0.02vw;
+    transform: rotateX(180deg)
+}
+
+.selected {
+    position: relative;
+    display: flex;
+    background: rgba(159, 255, 142);
+    color: black;
+    border-radius: 10px;
+    padding: 2%;
+    padding-left: 3.5%;
+    margin-bottom: 2.2%;
+    cursor: pointer;
+
+    box-shadow:    6px 6px 10px -1px rgb(0, 0, 0),
+                    -4px -4px 10px -1px rgba(3, 255, 3, 0.7),
+                    inset -4px -4px 8px -1px rgba(0, 0, 0),
+                    0px 12px 10px -10px rgba(36, 82, 27, 0.516);
+    
+    order: 0;
+}
+
+.selected::after {
+    content: "";
+    background: url("./img/chevron-down.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    width: 2vw;
+    height: 2vw;
+    right: 0.5vw;
+    top: 0.2vw;
+
+    transition: all 0.5s;
+}
+
+.selected:hover {
+    background: rgb(209, 255, 200);
+}
+
+.selected.red-border {
+    border: solid red;
+    border-width: 0.3vw;
+}
+
+.select-box .option {
+    background: rgba(159, 255, 142);
+    padding: 2%;
+    margin: 0.4vw;
+    cursor: pointer;
+    border-radius: 0.75vw;
+    box-shadow: 
+    inset 3px 3px 6px -1px rgb(0, 0, 0),
+    inset -3px -3px 6px -1px rgb(0, 0, 0);
+}
+
+.select-box .option:hover {
+    background: rgb(209, 255, 200);
+}
+
+.select-box label {
+    cursor: pointer;
+}
+
+.select-box .option .radio {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
